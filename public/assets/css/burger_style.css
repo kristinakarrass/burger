@@ -5,3 +5,8 @@ body {
 table {
 	background-color: white;
 }
+
+img {
+	height: 20rem;
+	width: 20rem;
+}	
