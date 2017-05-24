@@ -6,11 +6,11 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 //create all my routes and set up logic within those routes where required
-router.get("/", function (req, res) {
-	res.redirect('/burgers');
-});
+// router.get("/", function (req, res) {
+// 	res.redirect('/burgers');
+// });
 
-router.get("/burgers", function (req, res) {
+router.get("/", function (req, res) {
     burger.all(function(data) {
         var burgObject = {
           burgers: data
@@ -20,18 +20,18 @@ router.get("/burgers", function (req, res) {
     });
 });
 
-router.post("/burgers/create", function (req, res) {
+router.post("/", function (req, res) {
     var newBurger = req.body;
     burger.create([
         "burger_name", "devoured"
     ], [
-        newBurger.name, newBurger.devoured
+        newBurger.burger_name, newBurger.devoured
     ], function() {
-        res.redirect("/burgers");
+        res.redirect("/");
     });
 });
 
-router.put("burgers/update/:id", function (req, res) {
+router.put("/:id", function (req, res) {
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);
@@ -39,7 +39,7 @@ router.put("burgers/update/:id", function (req, res) {
     burger.update({
       devoured: req.body.devoured
     }, condition, function() {
-      res.redirect("/burgers");
+      res.redirect("/");
     });
 });
 
