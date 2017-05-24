@@ -7,6 +7,15 @@ table {
 }
 
 img {
-	height: 20rem;
-	width: 20rem;
+	height: 25rem;
+	width: 25rem;
 }	
+
+textarea {
+	margin-bottom: 20px;
+}
+
+.devour {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
