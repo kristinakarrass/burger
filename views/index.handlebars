@@ -28,13 +28,15 @@
 
   {{!row for burger input}}
   <div class="col-md-4">
-      <p class="text-center"><strong>Order the awesomest juiciest burger you can think of!</strong></p>    
-      <form method="POST" action="/" class="button-size">
+
+    <p class="text-center"><strong>Order the awesomest juiciest burger you can think of!</strong></p>    
+    <form class="create-update-form" action="/" method="POST">
       <div class="form-group text-center">
-      <textarea class="form-control" rows="3"></textarea>
-      <button type="submit" class="btn btn-primary">Order Burger!</button>
+        <textarea class="form-control" name="burger_name" rows="3" placeholder="enter your burger here"></textarea>
+        <button type="submit" class="btn btn-primary">Order Burger!</button>
       </div>
     </form>
+
   </div>
 
   {{!display devoured burgers}}

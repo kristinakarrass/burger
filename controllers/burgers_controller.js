@@ -21,11 +21,11 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", function (req, res) {
-    var newBurger = req.body;
+    console.log(req.body);
     burger.create([
-        "burger_name", "devoured"
+        "burger_name"
     ], [
-        newBurger.burger_name, newBurger.devoured
+        req.body.burger_name
     ], function() {
         res.redirect("/");
     });
@@ -33,11 +33,10 @@ router.post("/", function (req, res) {
 
 router.put("/:id", function (req, res) {
     var condition = "id = " + req.params.id;
-
     console.log("condition", condition);
 
     burger.update({
-      devoured: req.body.devoured
+      devoured: true
     }, condition, function() {
       res.redirect("/");
     });

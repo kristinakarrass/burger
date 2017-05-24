@@ -38,7 +38,8 @@ var orm = {
 	},
 	create: function(table, cols, vals, cb) {
 		var queryString = "INSERT INTO " + table + " (" + cols.toString();
-
+		console.log(cols.toString());
+		console.log(vals.length);
 		queryString += ") VALUES (" + printQuestionsMarks(vals.length) + ") ";
 		console.log(queryString);
 
