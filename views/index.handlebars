@@ -19,7 +19,7 @@
     	   {{this.id}} {{this.burger_name}}
       </li>
         <form action="/{{this.id}}?_method=PUT" method="POST">
-            <button type="submit" class="devour">Devour!</button>
+            <button type="submit" class="devour btn btn-primary">Devour!</button>
         </form>
       {{/unless}}
     {{/each}}
@@ -28,11 +28,11 @@
 
   {{!row for burger input}}
   <div class="col-md-4">
-      <p class="text-center"><strong>Order the most awesome juicy burger you can think of!</strong></p>    
+      <p class="text-center"><strong>Order the awesomest juiciest burger you can think of!</strong></p>    
       <form method="POST" action="/" class="button-size">
       <div class="form-group text-center">
       <textarea class="form-control" rows="3"></textarea>
-      <button type="submit">Order Burger!</button>
+      <button type="submit" class="btn btn-primary">Order Burger!</button>
       </div>
     </form>
   </div>
