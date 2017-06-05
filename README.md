@@ -20,3 +20,8 @@ When you feel it's time to make that burger vanish, click the button to devour i
 
 ![DevourBurger](/screenshots/devourBurger.png?raw=true "devour burger")
 
+## Aaaaaaaand it's gone!
+
+Your devoured burger will appear on the list of ex-burgers
+
+![BurgerDevoured](/screenshots/burgerDevoured.png?raw=true "burger devoured")
